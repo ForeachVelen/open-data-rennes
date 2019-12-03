@@ -7,28 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
 
     <meta name="author" content="PIXINVENT">
-    <title>Brequigny</title>
-    <link rel="apple-touch-icon" href="{{ vendor_url() }}app-assets/images/logo/logo-dark-bio.png">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ vendor_url() }}app-assets/images/logo/logo-dark-bio.png">
-    <link rel="stylesheet" type="text/css" href="{{ base_url('vendor/webfonts/open-sans/open-sans.css') }}" >
+    <title>Open Data Rennes</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ base_url('vendor/fontawesome/all.min.css') }}" media="screen">
-    <link rel="stylesheet" type="text/css" href="{{ base_url('vendor/fontawesome/fontawesome.min.css') }}" media="screen">
-    <!-- BEGIN VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ base_url('vendor/app-assets/css/vendors.css') }}">
-    <!-- END VENDOR CSS-->
-    <!-- BEGIN MODERN CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ base_url('vendor/app-assets/css/app.css') }}">
-    <!-- END MODERN CSS-->
-    <!-- BEGIN Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ base_url('vendor/app-assets/css/core/menu/menu-types/horizontal-menu.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ base_url('vendor/app-assets/css/core/colors/palette-gradient.css') }}">
-    <!-- END Page Level CSS-->
-    <!-- BEGIN Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ base_url('vendor/css/style.css') }}">
-    <!-- END Custom CSS-->
 
-    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ assets_url() }}css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ assets_url() }}css/mdb/modules/mdb.min.css">
+    <link rel="stylesheet" href="{{ assets_url() }}css/sb-admin/sb-admin-2.min.css">
+    <link rel="stylesheet" href="{{ assets_url() }}css/style.css">
+
+
 </head>
 
 <body id="page-top">
@@ -40,7 +34,6 @@
                 <ul class="nav navbar-nav mr-auto float-left">
                     <li class="nav-item">
                         <a class="navbar-brand d-flex justify-content-start align-items-center" href="{{ base_url('/') }}">
-                            <img class="brand-logo" alt="modern admin logo" src="{{ vendor_url() }}app-assets/images/logo/logo-dark-bio.png">
                             <h3 class="brand-text" style="font-weight: 700; text-transform: uppercase; margin: 0px; margin-left: 10px;">Open Data Rennes</h3>
                         </a>
                     </li>
@@ -60,14 +53,18 @@
 </main>
 @include('app.footer_bar')
 
-<script src="{{ vendor_url() }}js/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="{{ vendor_url() }}js/popper/popper.min.js" type="text/javascript"></script>
-<script src="{{ vendor_url() }}js/bootstrap/boostrap.min.js" type="text/javascript"></script>
-<script src="{{ vendor_url() }}js/switch/bootstrap-checkbox.min.js" type="text/javascript"></script>
-<script src="{{ vendor_url() }}js/switch/bootstrap-switch.min.js" type="text/javascript"></script>
-<script src="{{ vendor_url() }}js/switch/switch.min.js" type="text/javascript"></script>
-<script src="{{ vendor_url() }}js/clock/clock.min.js" type="text/javascript"></script>
-<script src="{{ vendor_url() }}js/cookie/cookie.min.js" type="text/javascript"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
 
 @yield('scripts')
 

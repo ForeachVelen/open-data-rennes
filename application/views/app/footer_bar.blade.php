@@ -4,7 +4,7 @@
 
         <div class="container">
 
-            <div class="footer-content-body">
+            <div class="footer-content-body" >
                 <p>Version : <strong>0.1</strong></p>
                 <p>Temps de chargement : <span id="time"><strong>100</strong> ms</span></p>
             </div>
