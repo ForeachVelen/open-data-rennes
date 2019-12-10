@@ -75,11 +75,11 @@ $query_builder = TRUE;
 
 
 $db['default'] = array(
-    'dsn'	=> 'mysql:host=localhost;dbname=brequigny',
+    'dsn'	=> 'mysql:host=localhost;dbname=open-data-rennes',
     'hostname' => '',
     'username' => 'root',
     'password' => '',
-    'database' => 'brequigny',
+    'database' => 'open-data-rennes',
     'dbdriver' => 'pdo',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

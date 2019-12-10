@@ -6,6 +6,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['alerte'] = 'IndexController/showAlert';
 
 
+//##### Bus réseau star #####
+$route['bus'] = 'IndexController/prochainPassageBus';
+
+$route['sens'] = 'IndexController/sensBus';
+
+$route['arret'] = 'IndexController/arretBus';
 
 
 //##### DEFAULT CONTROLLER #####

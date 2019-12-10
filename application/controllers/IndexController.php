@@ -22,18 +22,54 @@ class IndexController extends CI_Controller {
 
     public function index()
     {
-        //sens : Lycée Bréquigny ou Patton
-        //Arret : Volney
-        $bus = 'C5';
-        $arret = 'Volney';
-        $sens = 'Lycée Bréquigny';
+        $bus = $this->bus_model->getAllBus();
 
-        $json = $this->bus_model->getProchainBus($bus, $arret, $sens);
-        $prochain_passage = json_decode($json);
 
         $this->slice->view('main', array(
-            'prochain_passage' => $prochain_passage->records[0]->fields
+            'bus' => $bus
         ));
+    }
+
+    public function prochainPassageBus(){
+        $idBus = $this->input->post('bus');
+        $idArret = $this->input->post('arret');
+        $idSens = $this->input->post('sens');
+
+        $bus = $this->bus_model->getBusById($idBus);
+
+        $busNom = $bus['0']['nom'];
+
+        $arret = $this->bus_model->getArretById($idArret);
+
+        $arret = $arret['0']['nom'];
+
+        $sens = $this->bus_model->getSensById($idSens);
+
+        $sens = $sens['0']['nom'];
+
+        $json = $this->bus_model->getProchainBus($busNom, $arret, $sens);
+
+        $data = json_decode($json);
+
+        echo json_encode($data->records);
+
+    }
+
+    public function sensBus(){
+        $idBus = $this->input->post('id');
+
+        $sens = $this->bus_model->getSensByBus($idBus);
+
+        echo json_encode($sens);
+
+    }
+
+    public function arretBus(){
+        $idBus = $this->input->post('id');
+
+        $sens = $this->bus_model->getArretByBus($idBus);
+
+        echo json_encode($sens);
 
     }
 
