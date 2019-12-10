@@ -18,7 +18,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ assets_url() }}css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ assets_url() }}css/mdb/modules/mdb.min.css">
     <link rel="stylesheet" href="{{ assets_url() }}css/sb-admin/sb-admin-2.min.css">
     <link rel="stylesheet" href="{{ assets_url() }}css/style.css">
 
@@ -34,7 +33,7 @@
                 <ul class="nav navbar-nav mr-auto float-left">
                     <li class="nav-item">
                         <a class="navbar-brand d-flex justify-content-start align-items-center" href="{{ base_url('/') }}">
-                            <h3 class="brand-text" style="font-weight: 700; text-transform: uppercase; margin: 0px; margin-left: 10px;">Open Data Rennes</h3>
+                            <h4 class="brand-text">Open Data Rennes</h4>
                         </a>
                     </li>
                 </ul>
@@ -53,12 +52,13 @@
 </main>
 @include('app.footer_bar')
 
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
 
 
-<!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->

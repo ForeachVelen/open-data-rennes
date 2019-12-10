@@ -73,13 +73,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-/*'dsn'	=> 'mysql:host=localhost;dbname=sesame',
-	'hostname' => '51.77.159.162',
-	'username' => 'root',
-	'password' => 'root',
-	'database' => '',
- *
- */
 
 $db['default'] = array(
     'dsn'	=> 'mysql:host=localhost;dbname=brequigny',
