@@ -11,6 +11,7 @@ class IndexController extends CI_Controller {
         ##### MODELS #####
         $this->load->model("alerte_model");
         $this->load->model("bus_model");
+        $this->load->model("metro_model");
 
         ##### LIBRARIES #####
         $this->load->library('form_validation');
@@ -24,9 +25,11 @@ class IndexController extends CI_Controller {
     {
         $bus = $this->bus_model->getAllBus();
 
+        $metro = $this->metro_model->getAllMetro();
 
         $this->slice->view('main', array(
-            'bus' => $bus
+            'bus' => $bus,
+            'metro' => $metro
         ));
     }
 
@@ -82,6 +85,19 @@ class IndexController extends CI_Controller {
         $this->slice->view('alert', array(
             'alerts' => $alerts->records
         ));
+    }
+
+
+    public function prochainMetro(){
+        $arret = $this->input->post('arret');
+        $sens = $this->input->post('sens');
+
+        $json = $this->metro_model->getProchainMetro($arret, $sens);
+
+        $data = json_decode($json);
+
+        echo json_encode($data->records);
+
     }
 
 

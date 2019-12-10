@@ -13,6 +13,9 @@ $route['sens'] = 'IndexController/sensBus';
 
 $route['arret'] = 'IndexController/arretBus';
 
+//##### Métro réseau star #####
+$route['metro'] = 'IndexController/prochainMetro';
+
 
 //##### DEFAULT CONTROLLER #####
 $route['default_controller'] = 'IndexController';
