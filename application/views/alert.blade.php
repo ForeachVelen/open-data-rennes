@@ -1,12 +1,12 @@
 @extends('templates.app')
 
 @section('contents')
-    <div class="container mb-5">
-        <div class="row justify-content-between p-2">
-            <h4>Liste des alertes sur le réseau STAR</h4>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col">
+    <div class="card-deck" style="width: 95%; padding-left: 5%; padding-top: 2.5%; padding-bottom: 5%">
+        <div class="card text-center">
+            <div class="card-header">
+                <h4>Liste des alertes sur le réseau STAR</h4>
+            </div>
+            <div class="card-body">
                 <table id="liste_alert" class="table table-dark table-striped table-bordered" style="width:100%">
                     <thead>
                     <tr>
@@ -48,33 +48,33 @@
                 </table>
             </div>
         </div>
+    </div>
 
+    <div class="modal fade" id="modale_info" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Information supplémentaires</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5>Description</h5>
+                    <span id="description">
 
-        <div class="modal fade" id="modale_info" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Information supplémentaires</h5>
-                        <button type="button" class="close" data-dismiss="modal">
-                            <span>&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <h5>Description</h5>
-                        <span id="description">
+                    </span>
+                    <br><br>
+                    <a id="lien" href="" target="_blank" class="text-primary stretched-link">Plus d'information sur le site STAR</a>
+                </div>
+                <div class="modal-footer">
 
-                        </span>
-                        <br><br>
-                        <a id="lien" href="" target="_blank" class="text-primary stretched-link">Plus d'information sur le site STAR</a>
-                    </div>
-                    <div class="modal-footer">
-
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                    </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
                 </div>
             </div>
         </div>
     </div>
+
 @endsection
 
 @section('scripts')
